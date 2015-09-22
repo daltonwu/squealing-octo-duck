@@ -1,0 +1,3 @@
+virtualenv pd6env
+
+pip install flask

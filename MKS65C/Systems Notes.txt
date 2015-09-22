@@ -1,0 +1,142 @@
+2015-09-10 Thurs
+Aim: Time to C what we can do.
+
+Do Now: What command line programs would do the following?
+	(always assume you are starting at your home directory)
+	
+	1) Move foo.java from Desktop/ to Documents/
+	2) Remove all .class files
+	3) Connect to lisa.stuy.edu from someplace else
+	4) Figure out what gcc does
+	5) Copy woohoo.c from your home directory to a /code/ directory on homer (assume you are not working on homer itself)
+
+
+
+2015-09-11 Fri
+Aim: C what I did there?
+
+Do now:
+
+	From yesterday:
+		4) Figure out what gcc does
+		5) Copy woohoo.c from your home directory to a /code/ directory on homer (assume you are not working on homer itself)
+		
+	Today:
+		List the Java primitive variable types
+		* byte
+		* short
+		* int
+		* long
+		* float
+		* double
+		* boolean
+		* char
+		
+	Last Class Today!
+	
+		Every day, 1 student will be chosen at random to provide a recap of the previous day's class.
+		
+		That evening, the same person will be responsible for posting the notes to the class Piazza page. Make sure to tag the note as "last class today".
+		
+			Title the note LCT <MM/DD WEEKDAY>
+			For example: LCT 9/10 Thursday
+			
+			Also include at the end of the note a link to an interesting piece of tech/science news.
+
+
+
+2015-09-16 Wed
+Aim: Variables are the spice of life.
+
+Do Now: What is the smallest variable type that could be used to store the following values (using standard sizes)?
+
+	1) 5				byte
+	2) -30,000			short
+	3) 255				short
+	4) 5,000,000,000	float
+	
+C Primitive Variable Types
+	
+	All C primitives are numeric.
+	
+	The only difference is floating point vs. integer and size of variable.
+	
+	Size can be platform dependent.
+		sizeof(<TYPE>) can be used to find the size in bytes.
+		
+		sizeof(int)
+		
+	Types	Standard Size (bytes)
+	int			4
+	short		2
+	long		8
+	float		4
+	double		8
+	char		1
+	
+	All boolean values are numbers:
+		0  == false
+		!0 == true
+		
+		YOU WILL ALL MAKE THIS MISTAKE:
+			if(x = 6) {…}
+
+
+
+2015-09-17 Thurs
+Aim: Always read the fine print.
+
+Do Now: Open up your editor of choice (Emacs), write a basic "Hello, world!" program in Java.
+
+Data Types and Variables
+	
+	Character literals are single characters inside ''.
+		e.g., 'a', '*'
+	
+	String literals exist, even though there is no string data type.
+		e.g., "hello", "you smell"
+	
+	Any variable type can be decalred an "unsigned" variable. This signifies the variable will never be negative.
+		The lower bound of any unsigned variable is 0.
+		The upper bound will be greater than the signed version.
+		
+		e.g.	unsigned char x;
+				0 <= x <= 255
+
+
+
+2015-09-18 Fri
+SoTD: "Superstitious" — Stevie Wonder
+Aim: A vast array of possibilities.
+
+Do Now: How do you declare/use arrays in Java?
+
+Mentioned:
+$ echo $PATH
+$ which emacs
+
+plus C funsies
+
+
+
+2015-09-21 Mon
+
+
+
+2015-09-22 Tues
+
+
+
+2015-09-25 Fri
+
+
+
+2015-09-28 Mon
+
+
+
+2015-09-29 Tues
+
+
+
+2015-09-30 Wed
