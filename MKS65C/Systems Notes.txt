@@ -147,6 +147,20 @@ Memory management
 	
 
 2015-09-25 Fri
+SoTD: "Here Comes the Hotstepper" — Ini Kamoze
+Aim: OK, now we're really going to get to the point.
+
+int fred;
+fred is a placeholder pointing to a value in memory (an address in memory containing some information)
+
+Pointers — the fun really starts
+	
+	Variables designed to store memory addresses (think references in Java)
+	
+	& is used to get the address of a variable
+	
+	* is used to declare a variable as a pointer type
+		e.g., int *p, double *q, char *r …
 
 
 

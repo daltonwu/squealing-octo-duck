@@ -1,3 +1,9 @@
 virtualenv pd6env
 
 pip install flask
+
+jinja2
+
+{{template variables}}
+
+
