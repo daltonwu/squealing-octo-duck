@@ -148,7 +148,7 @@ Memory management
 
 2015-09-25 Fri
 SoTD: "Here Comes the Hotstepper" — Ini Kamoze
-Aim: OK, now we're really going to get to the point.
+Aim: Ok, now we're really going to get to the point.
 
 int fred;
 fred is a placeholder pointing to a value in memory (an address in memory containing some information)
@@ -161,10 +161,25 @@ Pointers — the fun really starts
 	
 	* is used to declare a variable as a pointer type
 		e.g., int *p, double *q, char *r …
+	
+	* is also used as the de-reference operator
+		It accesses the value at the memory location stored in a pointer
 
 
 
 2015-09-28 Mon
+SoTD: "Lump" — The Presidents of the United States of America
+Aim: Ok, now we're really going to get to the point.
+
+Do Now:
+	1) Declare int, double, and char variables.
+	2) Declare int, double, and char pointers.
+	3) Initialize each pointer to the address of the corresponding variable.
+	4) Print out the pointer's value for each (as an unsigned long).
+	5) Add 1 to each pointer.
+	6) Print out the pointers again.
+	What happened?
+
 
 
 
