@@ -124,6 +124,7 @@ SoTD: "Hunger Strike" — Temple of the Dog
 Aim: What's the point of it all?
 
 Memory management
+	
 	Memory allocation happens either at compile time or at run time (dynamic).
 	
 	Compiler Allocated Memory (Stack)
@@ -190,9 +191,16 @@ float fray[5]; // f-array, or f-ray
 float *fp = fray;
 
 C strings (ctrings)
-	Strings are character arrays that end with a null character (either '' or 0 f '\0').
 	
+	Strings are character arrays that end with a null character (either '' or 0 f '\0').
 	The terminating null character is a convention. String functions will not work correctly without it.
+	The following are valid ways to declare strings:
+		
+		char s[256]
+			Normal array declaration, allocates 256 bytes, nothing is set automatically
+		
+		char s[256] = "Imagine";
+			Allocates 256 bytes, puts "Imagine" in the first 7 bytes and adds a null at the 8th byte
 
 
 2015-09-30 Wed
