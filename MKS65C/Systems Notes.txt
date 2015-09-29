@@ -183,7 +183,16 @@ Do Now:
 
 
 2015-09-29 Tues
+SoTD: "In the Meantime" — Spacehog
+Aim: Time to stop stringing you along.
 
+float fray[5]; // f-array, or f-ray
+float *fp = fray;
+
+C strings (ctrings)
+	Strings are character arrays that end with a null character (either '' or 0 f '\0').
+	
+	The terminating null character is a convention. String functions will not work correctly without it.
 
 
 2015-09-30 Wed
