@@ -201,6 +201,193 @@ C strings (ctrings)
 		
 		char s[256] = "Imagine";
 			Allocates 256 bytes, puts "Imagine" in the first 7 bytes and adds a null at the 8th byte
+		
+		char s[] = "Tuesday";
+			Allocates 8 bytes, puts "Tuesday" in the first 7 bytes and adds a null at the 8th byte.
+		
+		char *s = "Mankind";
+			Allocates 8 bytes, puts "Mankind" in the first 7 bytes and adds a null at the 8th byte. s is a pointer variable instead of an array.
+	
+	You can only assign strings with = at delcaration.
+		char s[] = "zero";	//ok
+		s = "seven";		// not ok
 
 
 2015-09-30 Wed
+SoTD: "One Headlight" — The Wallflowers
+Aim: How to write functioning code
+
+Do Now: Write a C program that does the following:
+	1) Creates a string and sets it to some value.
+	2) Finds the length of the string and then prints it (code in main function)
+
+
+
+2015-10-01 Thurs
+2015-10-02 Fri
+
+2015-10-05 Mon
+2015-10-06 Tues
+2015-10-07 Wed
+2015-10-08 Thurs
+2015-10-09 Fri
+
+2015-10-12 Mon
+2015-10-13 Tues
+2015-10-14 Wed
+2015-10-15 Thurs
+2015-10-16 Fri
+
+2015-10-19 Mon
+2015-10-20 Tues
+2015-10-21 Wed
+2015-10-22 Thurs
+2015-10-23 Fri
+
+2015-10-26 Mon
+2015-10-27 Tues
+2015-10-28 Wed
+2015-10-29 Thurs
+2015-10-30 Fri
+
+
+2015-11-02 Mon
+2015-11-03 Tues
+2015-11-04 Wed
+2015-11-05 Thurs
+2015-11-06 Fri
+
+2015-11-09 Mon
+2015-11-10 Tues
+2015-11-11 Wed
+2015-11-12 Thurs
+2015-11-13 Fri
+
+2015-11-16 Mon
+2015-11-17 Tues
+2015-11-18 Wed
+2015-11-19 Thurs
+2015-11-20 Fri
+
+2015-11-23 Mon
+2015-11-24 Tues
+2015-11-25 Wed
+2015-11-26 Thurs
+2015-11-27 Fri
+
+2015-11-30 Mon
+
+
+2015-12-01 Tues
+2015-12-02 Wed
+2015-12-03 Thurs
+2015-12-04 Fri
+
+2015-12-07 Mon
+2015-12-08 Tues
+2015-12-09 Wed
+2015-12-10 Thurs
+2015-12-11 Fri
+
+2015-12-14 Mon
+2015-12-15 Tues
+2015-12-16 Wed
+2015-12-17 Thurs
+2015-12-18 Fri
+
+2015-12-21 Mon
+2015-12-22 Tues
+2015-12-23 Wed
+2015-12-24 Thurs
+2015-12-25 Fri
+
+2015-12-28 Mon
+2015-12-29 Tues
+2015-12-30 Wed
+2015-12-31 Thurs
+
+
+2015-01-01 Fri
+
+2015-01-04 Mon
+2015-01-05 Tues
+2015-01-06 Wed
+2015-01-07 Thurs
+2015-01-08 Fri
+
+2015-01-11 Mon
+2015-01-12 Tues
+2015-01-13 Wed
+2015-01-14 Thurs
+2015-01-15 Fri
+
+2015-01-18 Mon
+2015-01-19 Tues
+2015-01-20 Wed
+2015-01-21 Thurs
+2015-01-22 Fri
+
+2015-01-25 Mon
+2015-01-26 Tues
+2015-01-27 Wed
+2015-01-28 Thurs
+2015-01-29 Fri
+
+
+2015-02-01 Mon
+2015-02-02 Tues
+2015-02-03 Wed
+2015-02-04 Thurs
+2015-02-05 Fri
+
+2015-02-08 Mon
+2015-02-09 Tues
+2015-02-10 Wed
+2015-02-11 Thurs
+2015-02-12 Fri
+
+2015-02-15 Mon
+2015-02-16 Tues
+2015-02-17 Wed
+2015-02-18 Thurs
+2015-02-19 Fri
+
+2015-02-22 Mon
+2015-02-23 Tues
+2015-02-24 Wed
+2015-02-25 Thurs
+2015-02-26 Fri
+
+2015-02-29 Mon
+
+
+2015-03-01 Tues
+2015-03-02 Wed
+2015-03-03 Thurs
+2015-03-04 Fri
+
+2015-03-07 Mon
+2015-03-08 Tues
+2015-03-09 Wed
+2015-03-10 Thurs
+2015-03-11 Fri
+
+2015-03-14 Mon
+2015-03-15 Tues
+2015-03-16 Wed 
+2015-03-17 Thurs
+2015-03-18 Fri
+
+2015-03-21 Mon
+2015-03-22 Tues
+2015-03-23 Wed
+2015-03-24 Thurs
+2015-03-25 Fri
+
+2015-03-28 Mon
+2015-03-29 Tues
+2015-03-30 Wed
+2015-03-31 Thurs
+
+
+2015-04-01
