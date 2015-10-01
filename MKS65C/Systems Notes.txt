@@ -213,6 +213,7 @@ C strings (ctrings)
 		s = "seven";		// not ok
 
 
+
 2015-09-30 Wed
 SoTD: "One Headlight" — The Wallflowers
 Aim: How to write functioning code
@@ -224,6 +225,61 @@ Do Now: Write a C program that does the following:
 
 
 2015-10-01 Thurs
+SoTD: "Tom Sawyer" — Rush
+Aim: How to write functioning code
+
+Functions: A brief interlude
+	
+	All C functions are "pass by value"
+		A parameter is a copy of the variable passed into the function.
+		The original variable is not touched.
+	
+	function headers
+		<return type> <name> (<parameters>)
+	
+	You must declare a function before you use it.
+	This can be done in a few ways:
+		
+		1) Write the entire function at the top of your code, making sure to keep the order correct.
+		
+		2) Write the function headers at the top of your code, and then provide the full definition later.
+		
+		3) Put all the function headers in a separate file (ending in .h). Then include that file in your .c file and provice the efinitions there.
+
+Back to Ctrings
+	
+	string.h
+		C library that includes useful string functions.
+		
+		All the functions assume that the parameter strings are always null-terminated.
+		
+		int strlen(char*s)
+			Returns the number of characters from the start of s up to but not including the termianting null
+		
+		int strcmp(char *s1, char *s2)
+			Returns 0 if s1 and s2 are indentical up to the terminating null.
+			
+			Returns a positive number of s1 is lexicographically greater than s2
+		
+		char * strcpy(char *dest, char *source)
+			Copies all the chars up to and including the terminating null from source into dest
+			
+			Returns dest
+		
+		char * strcat(char *s1, char *s2)
+			Appends all the characters up to and including the terminating null in s2 to the end of s1
+			
+			Returns s1
+		
+		Many string functions have a "strn" version, these take an extra parameter that sets a limit to the number of bytes you will look at in a string.
+			
+			strncat(char *s1, char *s2, int n)
+				Appends at most n chars from s2 into s1.
+				
+				It will stop if it hits a terminating null in s2 before n bytes.
+
+
+
 2015-10-02 Fri
 
 2015-10-05 Mon
