@@ -106,7 +106,7 @@ Data Types and Variables
 
 
 2015-09-18 Fri
-SoTD: "Superstitious" — Stevie Wonder
+SotD: "Superstitious" — Stevie Wonder
 Aim: A vast array of possibilities.
 
 Do Now: How do you declare/use arrays in Java?
@@ -120,7 +120,7 @@ plus C funsies
 
 
 2015-09-22 Tues
-SoTD: "Hunger Strike" — Temple of the Dog
+SotD: "Hunger Strike" — Temple of the Dog
 Aim: What's the point of it all?
 
 Memory management
@@ -148,7 +148,7 @@ Memory management
 	
 
 2015-09-25 Fri
-SoTD: "Here Comes the Hotstepper" — Ini Kamoze
+SotD: "Here Comes the Hotstepper" — Ini Kamoze
 Aim: Ok, now we're really going to get to the point.
 
 int fred;
@@ -169,7 +169,7 @@ Pointers — the fun really starts
 
 
 2015-09-28 Mon
-SoTD: "Lump" — The Presidents of the United States of America
+SotD: "Lump" — The Presidents of the United States of America
 Aim: Ok, now we're really going to get to the point.
 
 Do Now:
@@ -184,7 +184,7 @@ Do Now:
 
 
 2015-09-29 Tues
-SoTD: "In the Meantime" — Spacehog
+SotD: "In the Meantime" — Spacehog
 Aim: Time to stop stringing you along.
 
 float fray[5]; // f-array, or f-ray
@@ -215,7 +215,7 @@ C strings (ctrings)
 
 
 2015-09-30 Wed
-SoTD: "One Headlight" — The Wallflowers
+SotD: "One Headlight" — The Wallflowers
 Aim: How to write functioning code
 
 Do Now: Write a C program that does the following:
@@ -225,7 +225,7 @@ Do Now: Write a C program that does the following:
 
 
 2015-10-01 Thurs
-SoTD: "Tom Sawyer" — Rush
+SotD: "Tom Sawyer" — Rush
 Aim: How to write functioning code
 
 Functions: A brief interlude
@@ -285,11 +285,16 @@ Back to Ctrings
 
 
 2015-10-05 Mon
-SoTD: "Thunderstruck" — AC/DC
+SotD: "Thunderstruck" — AC/DC
 
 
 
 2015-10-06 Tues
+SotD: "Fake Plastic Trees" — Radiohead
+Aim: Make it so
+
+
+
 2015-10-07 Wed
 2015-10-08 Thurs
 2015-10-09 Fri
