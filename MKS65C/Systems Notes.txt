@@ -296,6 +296,23 @@ Aim: Make it so
 
 
 2015-10-07 Wed
+SotD: "Rearviewmirror" — Pearl Jam
+Aim: Make it so
+
+Separate compilation
+	
+	You can combine multiple C files into a C program by including them all in one gcc command.
+		e.g.:
+			gcc test.c string.c foo.c woohoo.c
+	
+	You cannot have duplicate function or global variable names across these files. This includes the main function.
+	
+	gcc -c
+		Will compile a .c file into a .o file (compiled code file, not a fully functional program). Do this to compile a .c file that does not contain a main function.
+	
+	gcc can link .o files together with .c files.
+
+
 2015-10-08 Thurs
 2015-10-09 Fri
 
