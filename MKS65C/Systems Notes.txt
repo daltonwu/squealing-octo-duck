@@ -39,7 +39,7 @@ Do now:
 		That evening, the same person will be responsible for posting the notes to the class Piazza page. Make sure to tag the note as "last class today".
 		
 			Title the note LCT <MM/DD WEEKDAY>
-			For example: LCT 9/10 Thursday
+			For example: LCT 09/10 Thursday
 			
 			Also include at the end of the note a link to an interesting piece of tech/science news.
 
@@ -314,6 +314,33 @@ Separate compilation
 
 
 2015-10-08 Thurs
+SoTD: "Breaking the Girl" — Red Hot Chili Peppers
+Aim: If you can't (al)locate your memory then … I forget
+
+Dynamic memory allocation
+	
+	malloc(int x)
+		Allocates x bytes of memory (from the heap)
+		
+		Returns the address at the beginning of the allocation
+		
+		Returns a void *, always typecast to the correct pointer type
+	
+	calloc(int n, int x)
+		Allocates n * x bytes of memory
+		
+		Ensures that each bit is set to 0
+		
+		Works like malloc in all other ways
+
+
+
+
+
+
+
+
+
 2015-10-09 Fri
 
 2015-10-12 Mon
