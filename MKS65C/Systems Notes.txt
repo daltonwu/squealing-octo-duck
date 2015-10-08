@@ -332,12 +332,13 @@ Dynamic memory allocation
 		Ensures that each bit is set to 0
 		
 		Works like malloc in all other ways
-
-
-
-
-
-
+	
+	realloc(void *p, int x)
+		Changes the amount of memory allocated to a given block.
+		
+		p must be a pointer to the beginning of an allocated block of memory, but it does not have to be the original pointer
+		
+		If x is smaller than the original size of the alocation, the extra bytes will be released
 
 
 
