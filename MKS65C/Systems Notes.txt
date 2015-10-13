@@ -387,7 +387,27 @@ struct
 
 
 2015-10-12 Mon
+
+
+
 2015-10-13 Tues
+SoTD: "Low Rider" — War
+Aim: Zelda's in trouble, get Link!
+
+Do Now: What's wrong with this function?
+		(Assume that node has been declared correctly)
+
+node *insert_front(node *n, int i) {
+	node new;
+	
+	new.i = i;
+	new.next = n;
+	
+	return &new;
+}
+
+
+
 2015-10-14 Wed
 2015-10-15 Thurs
 2015-10-16 Fri
