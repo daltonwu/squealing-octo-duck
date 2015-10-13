@@ -343,6 +343,48 @@ Dynamic memory allocation
 
 
 2015-10-09 Fri
+SotD: "Papa's Got a Brand New Bag" — James Brown
+Aim: Always structure your code well.
+
+Dynamic Memory Allocation
+	
+	Normal memory allocation happens on the stack.
+	
+	Stack memory gets released as functions pop off.
+	
+	Dynamic memory is located on the heap. It presists even after the function that created it pops off the stack.
+	
+	You must manually release dynamically allocated memory from the heap.
+	
+	void free(void *ptr)
+		Releases dynamically allocated memory.
+		
+		Takes one parameter, a pointer to the beginning of a dynamically allocated block of memory.
+		
+		Every call to malloc/calloc should have a corresponding call to free.
+		
+		int *p;
+		p = (int *)malloc(20);
+		free(p);
+	
+typedef
+	Provide a new name for an existing datatype.
+	
+	typedef <real type> <new name>;
+	
+	e.g.:
+		typedef unsigned int size_t;
+		size_t x = 139; // x is really an unsigned int
+
+struct
+	A collection of values in a single datatype
+	
+	struct {
+		int a;
+		char x;
+	} s;
+
+
 
 2015-10-12 Mon
 2015-10-13 Tues
