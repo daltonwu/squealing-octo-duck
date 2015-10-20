@@ -414,6 +414,19 @@ node *insert_front(node *n, int i) {
 
 2015-10-19 Mon
 2015-10-20 Tues
+SoTD: "Wheels" ― Cake
+Aim: File this under useful information.
+
+Do Now: What are the different kinds of file permissions?
+
+File permissions
+	
+	3 kinds of permissions
+		read, write, execute
+	
+
+
+
 2015-10-21 Wed
 2015-10-22 Thurs
 2015-10-23 Fri
