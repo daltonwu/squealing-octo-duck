@@ -428,6 +428,62 @@ File permissions
 
 
 2015-10-21 Wed
+
+Note: Don't compile .h files!
+
+SoTD: "Everything" — MrNorth
+Aim: Opening up a whole new world of possibilities.
+
+chmod
+chown
+chgrp
+
+File Table
+	
+	A list of all files used by a program while it is running.
+	
+	Contains basic information like the file's location and size.
+	
+	The file table has a limited size, which is a power of 2 and commonly 256. getdtablesize() will return this value.
+	
+	Each file is given an integer index, starting at 0. This is referred to as the file descriptor.
+	
+	There are 3 files always open in the table:
+		0	STDIN_FILENO	stdin
+		1	STDOUT_FILENO	stdout
+		2	STDERR_FILENO	stderr
+	
+	open	<fcntl.h>
+		Add a file to the file table and returns its file descriptor.
+		
+		If open fails, -1 is returned. Extra error information can be found in errno.
+			
+			errno is an int variable that can be found in <errno.h>
+			Using strerr (in <string.h) on errno returns a string description of the error
+		
+		open(<PATH>, <FLAGS>, <MODE>)
+		
+		mode
+			Only used when creating a file.
+			Set the new file's permissions using a 3-digit octal num.
+			
+			Octal nums have a leading 0
+				0644, 0777, …
+		
+		flags
+			Determine what you plan to do with the file.
+			
+			Use the following constants:
+				0_RDONLY
+				0_WRONLY
+				0_RDWR
+				0_APPEND
+				0_TRUNC
+				0_CREAT
+				0_EXCL	(when combined with 0_CREAT, returns error if file exists)
+
+
+
 2015-10-22 Thurs
 2015-10-23 Fri
 
