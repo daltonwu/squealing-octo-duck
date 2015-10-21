@@ -7,3 +7,76 @@ jinja2
 {{template variables}}
 
 
+
+http://www.catskillsconf.com
+
+something about foraging and blacksmithing
+
+BSON is JSON with binary
+Can't put image in JSON because it's not just text, it's binary
+So BSON is for that
+
+so in python you can use the bracket notation but not the dot notation for keys
+
+
+$ mongo
+> show dbs
+> use pd6
+> show collections
+> db.dropDatabase()
+> show dbs
+> use placedb5
+> db.dropDatabase()
+> use placedb6
+> db.dropDatabase()
+> use placedb7
+> db.dropDatabase()
+
+> use pd6
+switched to db pd6
+> show collections
+> var x = {'name':"Tom", "age":30}
+> y = {}
+{ }
+> n['name'] = "Dana"
+Dana
+> y['age'] = 48
+48
+> y
+{ "name" : "Dana", "age" : 48 }
+> var x = {name:"Tom","age":30}
+> x.name="THomas"
+THomas
+> x
+{ "name" : "THomas", "age" : 30}
+> x.last="Thompson"
+Thompson
+> x
+{ "name" : "THomas", "age" : 30, "last" : "Thompson" }
+> var x = {'name':"Tom","age":30}
+> x
+{ "name" : "Tom", "age" : 30 }
+> y
+{ "name" : "Dana", "age" : 48 }
+> db.people.insert(x)
+> db.people.insert(y)
+> db.people.insert({name:"Sue",age:60})		don't need quotes because that's how dictionaries are defined
+> show collections
+people
+system.indexes
+> db.people.find()
+{ "_id" : ObjectId("5627b7df40e041e8048ba425"), "name" : "Tom", "age" : 30 }
+{ "_id" : ObjectId("5627b7df40e041e8048ba426"), "name" : "Dana", "age" : 48 }
+{ "_id" : ObjectId("5627b7df40e041e8048ba427"), "name" : "Sue", "age" : 60 }
+> var x = {'name':"Tom","age":30}
+> db.people.find()
+{ "_id" : ObjectId("5627b7df40e041e8048ba425"), "name" : "Tom", "age" : 30 }
+{ "_id" : ObjectId("5627b7df40e041e8048ba426"), "name" : "Dana", "age" : 48 }
+{ "_id" : ObjectId("5627b7df40e041e8048ba427"), "name" : "Sue", "age" : 60 }
+> db.people.insert(x)
+> db.people.find()
+{ "_id" : ObjectId("5627b7df40e041e8048ba425"), "name" : "Tom", "age" : 30 }
+{ "_id" : ObjectId("5627b7df40e041e8048ba426"), "name" : "Dana", "age" : 48 }
+{ "_id" : ObjectId("5627b7df40e041e8048ba427"), "name" : "Sue", "age" : 60 }
+{ "_id" : ObjectId("5627b7df40e041e8048ba428"), "name" : "Tom", "age" : 30 }		the hash codes are all wrong but whatever
+
