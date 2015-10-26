@@ -208,7 +208,7 @@ C strings (ctrings)
 		char *s = "Mankind";
 			Allocates 8 bytes, puts "Mankind" in the first 7 bytes and adds a null at the 8th byte. s is a pointer variable instead of an array.
 	
-	You can only assign strings with = at delcaration.
+	You can only assign strings with = at declaration.
 		char s[] = "zero";	//ok
 		s = "seven";		// not ok
 
@@ -538,6 +538,52 @@ read — <unistd.h>
 2015-10-23 Fri
 
 2015-10-26 Mon
+SoTD: "Crazy" — Gnarls Barkley
+Aim: Seek and ye shall find
+
+umask — <sys/stat.h>
+	
+	Set the file creation permission mask
+	
+	By default, created files are not given the exact permissions provided in the mode argument to open.
+	
+	A mask is applied that automatically shuts off certain permissions.
+	
+	Umask is applied by using bitwise negation on the mask, then bitwise anding it to the mode
+		new_permissions = ~mask & mode
+	
+	The default mask is 022, which shuts off write permissions for group and other.
+	
+	umask(<MASK>);
+		You can define the umask using a 3-digit octal #
+		umask(0000);
+
+lseek — <unistd.h>
+	
+	Set the current position in an open file
+	
+	lseek(<FILE DESCRIPTOR>, <OFFSET>, <WHENCE>)
+	
+	offset
+		Number of bytes to move the position by.
+		Can be negative.
+	
+	whence
+		Where to measure the offset from
+		
+		SEEK_SET
+			offset is evaluated from the beginning of the file
+		
+		SEEK_CUR
+			offset is relative to the current position in the file
+		
+		SEEK_END
+			offset is evaluated from the end of the file
+	
+	returns the number of bytes the current position is from the beginning of the file, or -1 (errno)
+
+
+
 2015-10-27 Tues
 2015-10-28 Wed
 2015-10-29 Thurs
