@@ -689,6 +689,39 @@ rewinddir — <dirent.h>
 
 
 2015-10-30 Fri
+SoTD: "War Pigs" — Black Sabbath
+Aim: Puttin' in the puts.
+
+Command-Line Arguments
+	
+	int main(int argc, char *argv[])
+	
+	program name is considered the first command-line argument
+	
+	argc
+		number of command-line arguments
+	
+	argv
+		array of command-line arguments
+	
+scanf — <stdio.h>
+	
+	scanf(<FORMAT STRING>, <VAR 1>, <VAR 2>, …)
+	
+	Reads in data from stdin using the format string to determine types.
+	
+	Puts the data in each variable.
+	
+	Variables must be pointers
+	
+	int x; float f; double d;
+	scanf("%d %f %lf", &x, &f, &d);
+
+fgets — <stdio.h>
+	 
+	 sscanf
+
+
 
 2015-11-02 Mon
 2015-11-03 Tues
