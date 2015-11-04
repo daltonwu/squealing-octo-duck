@@ -726,6 +726,36 @@ fgets — <stdio.h>
 2015-11-02 Mon
 2015-11-03 Tues
 2015-11-04 Wed
+SoTD: "Shine" — Collective Soul
+Aim: Are your processes running? — Then you should go out and catch them!
+Do Now: Run the command ps in a terminal. What do you see?
+
+Processes
+	Every running program is a process. A process can create subprocesses, but these are no different from regular processes.
+	
+	A processor can handle 1 process per cycle (per core).
+	"Multitasking" appears to happen because the processor switches between all the active processes quickly.
+	
+	pid
+		Every process has a unique identifier called the pid.
+		
+		pid 1 is the init process
+		
+		Each entry in the /proc directory is a current pid
+	
+	getpid() — <unistd.h>
+		returns the current process's pid
+	
+	getppid() — <unistd.h>
+		returns parent process's pid
+	
+	fork() — <unistd.h>
+		Creates a separate process based on the current one. The new process is called the child. The original is called the parent.
+		
+		The child process is a duplicate of the parent process. All parts of the parent process are copied, including stack and heap memory, and the file table.
+
+
+
 2015-11-05 Thurs
 2015-11-06 Fri
 
