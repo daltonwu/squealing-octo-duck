@@ -753,10 +753,30 @@ Processes
 		Creates a separate process based on the current one. The new process is called the child. The original is called the parent.
 		
 		The child process is a duplicate of the parent process. All parts of the parent process are copied, including stack and heap memory, and the file table.
+		
+			A quick note on threads: a thread is a separate executable entity similar to a child process, except a thread is not a standalone process.
+			It does not have its own memory space, instead it shares its parent's memory.
+		
+		Returns 0 to the child and the child's pid to the parent or -1 (errno).
+		
+		If a parent process ends before the child, the child's new parent pid is 1
+	
+	wait — <unistd.h>
+		
+		Stops a parent process from running until any child has provided status information to the parent (usualy the child has exited).
+		
+		Returns the pid of the child that exited, or -1 (errno).
 
 
 
 2015-11-05 Thurs
+SoTD: "Us and Them" — Pink Floyd
+Aim: Go fork off (another process)
+
+
+
+
+
 2015-11-06 Fri
 
 2015-11-09 Mon
