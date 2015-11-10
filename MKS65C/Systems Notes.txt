@@ -786,6 +786,60 @@ Aim: Time to bring out the executioner.
 
 
 2015-11-10 Tues
+SoTD: "Burden in my Hand" — Soundgarden
+Aim: Invasion of the Process Snatchers.
+
+waitpid — <unistd.h>
+	
+	Waits for a specific child
+	
+	waitpid(pid, status, options)
+		pid
+			The pid of the specific child to look for
+			If -1, will wait for any child.
+		
+		options
+			Can set other behaivior for wait, if 0, will work normally.
+
+The exec family — <unistd.h>
+	There are a number of C functions that can be used to run other programs from within our own programs.
+	
+	Replaces the current process with the new program, any code after a call to an exec function will be ignored.
+	
+	execl
+		execl(<PATH>, <COMMAND>, <ARGS>, NULL)
+		
+		PATH
+			The path to the program (ex: "/bin/ls")
+		
+		COMMAND
+			The name of the program (ex: "ls")
+		
+		ARGS
+			Each command-line argument you wish to give the program (ex "-a", "-l")
+			
+			The last argument must be NULL
+		
+		example
+			execl("/bin/ls", "ls", "-a", "-l", NULL);
+	
+	execlp
+		execlp(<PATH>, <COMMAND>, <ARGS>, NULL)
+		
+		Works like execl, except it uses the PATH environment variable for commands, so you can use "ls" as the PATH instead of "/bin/ls"
+		
+		execlp("ls", "ls", "-a", "-l", NULL)
+	
+	execvp
+		execvp(<PATH>, <ARGUMENT ARRAY>)
+		
+		AGUMENT ARRAY
+			Array of strings, with element 0 must be t he name of the program to be executed and the last element must be NULL.
+		
+		Like execlp, the PATH argument will take the PATH environment variable into account.
+
+
+
 2015-11-11 Wed
 2015-11-12 Thurs
 2015-11-13 Fri
