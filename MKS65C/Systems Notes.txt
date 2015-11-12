@@ -833,8 +833,8 @@ The exec family — <unistd.h>
 	execvp
 		execvp(<PATH>, <ARGUMENT ARRAY>)
 		
-		AGUMENT ARRAY
-			Array of strings, with element 0 must be t he name of the program to be executed and the last element must be NULL.
+		ARGUMENT ARRAY
+			Array of strings, with element 0 must be the name of the program to be executed and the last element must be NULL.
 		
 		Like execlp, the PATH argument will take the PATH environment variable into account.
 
@@ -843,6 +843,31 @@ The exec family — <unistd.h>
 2015-11-11 Wed
 2015-11-12 Thurs
 2015-11-13 Fri
+SoTD: "Sell Out" — Reel Big Fish
+Aim: Let's take this to delimit!
+
+strsep — <string.h>
+	
+	Used for parsing a string with a common delimiter
+	
+	strsep(<SOURCE>, <DELIMITER>)
+	
+	Locates the first occurrence of the delimiter in a string and replaces that character with NULL
+	
+	Returns the beginning of the original string
+	sets the source string to the string starting at 1 index past the location of the new NULL
+	
+	Since the source variable's value is changed, it must be a pointer to a string.
+	
+	char line[100] = "wow-this-is-cool";
+	char *s1 = line;
+	
+	strsep( &s1, "-" )
+		replace the - after wow with NULL
+		returns "wow"
+		sets s1 to "this-is-cool"
+
+
 
 2015-11-16 Mon
 2015-11-17 Tues
