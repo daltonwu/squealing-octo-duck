@@ -936,6 +936,12 @@ File Redirection
 2015-11-20 Fri
 
 2015-11-23 Mon
+2015-11-24 Tues
+2015-11-25 Wed
+2015-11-26 Thurs
+2015-11-27 Fri
+
+2015-11-30 Mon
 SoTD: "Billie Jean" — Michael Jackson
 Aim: Sending mixed signals
 
@@ -968,19 +974,145 @@ Signal handling in C programs <signal.h>
 		To work with signals in a C program you must create a signal-handling function.
 		
 		Some signals (like SIGKILL) cannot be caught.
+		
+		//[CODE]
+		
+		#include <stdio.h>
+		#include <signal.h>
+		
+		/*
+			Static functions must be written in the file where they are used.
+			sighandler() must be static because it listens for signals.
+		*/
+		
+		static void sighandler(int signo) {
+			if(signo == SIGINT) {
+				printf("Interrupted … How rude!\n");
+				exit(0);
+			}
+			else if(signo == SIGSEGV) {
+				printf("Nothing to see here …\n");
+			}
+		}
+		
+		int main() {
+			signal(SIGINT, sighandler);
+			signal(SIGSEGV, sighandler);
+			int i = 0;
+			while(1) {
+				printf("G'day, mate!\t%d\t%d\n", i++, getpid());
+				sleep(1);
+			}
+		}
 
-
-
-2015-11-24 Tues
-2015-11-25 Wed
-2015-11-26 Thurs
-2015-11-27 Fri
-
-2015-11-30 Mon
 
 
 2015-12-01 Tues
+SoTD: "Say It Ain't So" — Weezer
+Aim: You want the signal? You can't handle the signal!
+
+Signal handling in C programs <signal.h>
+	
+	sighandler
+		To work with signals in a C program you must create a signal handling function.
+		
+		Some signals (like SIGKILL) cannot be caught.
+		
+		static void sighandler(int signo)
+		
+		Must be static, must be void, must take a single int parameter.
+		
+		static
+			The function can only be called from a within the file it is defined.
+	
+	signal
+		After you create the function, you attach the signals to it using the signal function:
+			
+			signal(SIGNUMBER, sighandler)
+
+
+
 2015-12-02 Wed
+NOTE: Registering for graphics
+SoTD: "Imagine" — John Lennon
+Aim: Sharing is caring!
+
+Do Now:
+	Write a simple C program that creates a child process and have the parent
+	wait for the child to exit.
+	
+	Create a primitive variable in the parent before forking, then modify that
+	variable in the child and print it out in both the child and the parent.
+
+Shared Memory — <sys/shm.h>, <sys/ipc.h>, <sys/types.h>
+	A segment of heap memory that can be accessed by multiple processes.
+	
+	Shared memory is accessed via some key that is known by any process that
+	needs to access it.
+	
+	Shared memory does not get released when a program exits.
+	
+	5 shared-memory operations:
+		1.	Create the segment (happens just once)
+		2.	Access the segment (once each process)
+		3.	Attach the segment to a variable (once each process)
+		4.	Detach the segment from the variable (once each process)
+		5.	Remove the segment (happens just once)
+
+	shmget
+		Creates or accesses a shared memory segment.
+		
+		Returns a shared memory descriptor (similar to file descriptor),
+		or -1 if it fails.
+		
+		#include <sys/ipc.h>
+		#include <sys/shm.h>
+		
+		int shmget(key_t key, size_t size, int shmflag);
+		
+			key
+				Unique integer identifier for the shared memory segment.
+			
+			size
+				How much memory to request.
+			
+			flags
+				Include permissions for the segment.
+				
+				Combine with bitwise OR
+				
+				IPC_CREAT
+					Creates the segment.
+					If segment is new, will zero all bits.
+				
+				IPC_EXCL
+					Fail if the segment already exists and IPC_CREAT is on.
+			
+			Example:
+				int sd;
+				sd = shmget(24601, 1024, 0644 | IPC_CREAT);
+	
+	shmat
+		Attaches a shared memory segment to a variable.
+		
+		Returns a pointer to the segment or -1 (errno).
+		
+		#include <sys/types.h>
+		#include <sys/shm.h>
+		
+		void *shmat(int shmid, const void *shmaddr, int shmflag);
+		
+			shmid
+				Descriptor (return value of shmget)
+			
+			shmaddr
+				Address
+			
+			shmflag
+				
+
+
+
 2015-12-03 Thurs
 2015-12-04 Fri
 
