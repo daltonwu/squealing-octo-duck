@@ -1171,7 +1171,7 @@ Shared Memory!
 
 
 2015-12-07 Mon
-SoTD: "The General" — Dsipatch
+SoTD: "The General" — Dispatch
 Aim: How do we flag a resource?
 
 Semaphores (created by Edsgar Dijkstra)
