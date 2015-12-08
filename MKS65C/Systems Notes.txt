@@ -1171,7 +1171,7 @@ Shared Memory!
 
 
 2015-12-07 Mon
-SoTD: "The General" — Dsipatch
+SoTD: "The General" — Dispatch
 Aim: How do we flag a resource?
 
 Semaphores (created by Edsgar Dijkstra)
@@ -1249,6 +1249,77 @@ Semaphores (created by Edsgar Dijkstra)
 
 
 2015-12-08 Tues
+SoTD: "Time Is Running Out" — Muse
+Aim: What's semaphore? — To control resources!
+
+Semaphore code
+	semctl — <sys/types.h> <sys/ipc.h> <sys/sem.h>
+		
+		Control the semaphore, including:
+			
+			Set the semaphore value
+			Remove the semaphore
+			Get the current value
+			Get information about the semaphore
+		
+		semctl(<DESCRIPTOR>, <INDEX>, <OPERATION>, <DATA>)
+			
+			DESCRIPTOR
+				The return value of semget
+			
+			INDEX
+				The index of the semaphore you want to control in the semaphore
+				set identified by the descriptor.
+				
+				For a single semaphore set, 0.
+			
+			OPERATION
+				One of the following constants (there are others as well)
+				
+				IPC_RMID: remove the semaphore
+				
+				SETVAL: Set the value
+					(requires DATA)
+				
+				SETALL: Set the value of every semaphore in the set
+					(requires DATA)
+				
+				GETVAL: Return the value
+				
+				IPC_STAT: Populate buffer with information about the semaphore.
+					(requires data)
+			
+			DATA
+				Variable for setting/storing information about the semaphore
+				(datatype: union semun)
+				
+				union north {
+					int i; // 4
+					char c; // 1
+					double d; // 8
+				}; // size of union north is 8, not 13!
+				
+				union north foo;
+				foo.i = 12;
+				foo.d = 183.192; // overwrites all bytes
+				foo.c = 'x'; // overwrites 1 byte
+				printf("%c", foo.c); // prints 'x'
+				printf("%f", foo.d); // prints something weird
+				
+				You have to declare this union in your main.c file on Linux
+				machines:
+				
+				union semun {
+					int val;
+					struct semid_ds *buf;
+					unsigned short *array;
+					struct seminfo *__buf;
+				};
+					val: used to set initial value
+					buf: buffer for IPC_STAT
+
+
+
 2015-12-09 Wed
 2015-12-10 Thurs
 2015-12-11 Fri
