@@ -1197,7 +1197,7 @@ Semaphores (created by Edsgar Dijkstra)
 			Release the semaphore to signal you are done with its associated
 			resource.
 			
-			psuedocode:
+			pseudocode:
 				S++
 		Down(S) / P(S)
 			Attempt to take the semaphore.
@@ -1250,7 +1250,7 @@ Semaphores (created by Edsgar Dijkstra)
 
 2015-12-08 Tues
 SoTD: "Time Is Running Out" — Muse
-Aim: What's semaphore? — To control resources!
+Aim: What's a semaphore? — To control resources!
 
 Semaphore code
 	semctl — <sys/types.h> <sys/ipc.h> <sys/sem.h>
@@ -1327,7 +1327,7 @@ Aim: Turn down or up?
 $ ipcs
 
 Semaphore code
-	sempo
+	semop
 		
 		Perform semaphore operations (like Up/Down)
 		
