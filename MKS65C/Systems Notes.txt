@@ -1410,6 +1410,50 @@ int main() {
 2015-12-11 Fri
 
 2015-12-14 Mon
+SoTD: "Shinbone Alley" / "Hard to Exist" — Spin Doctors 
+Aim: Ceci n'est pas une pipe
+
+Pipe
+	A conduit between 2 separate processes.
+	
+	Pipes have 2 ends, a read end and a write end.
+	
+	Pipes are unidirectional (a single pipe must be either read- or write-only
+	in a process).
+	
+	Pipes act just like files.
+	
+	You can transfer any data you like through a pipe using read/write.
+	
+	Unnamed pipes have no external identification (like a descriptor or name).
+	
+	pipe — <unistd.h>
+		Creates an unnamed pipe.
+		
+		Returns 0 if the pipe was created or -1 if not.
+		
+		Opens both ends of the pipe as files.
+		
+		pipe(int descriptors[2])
+			descriptors
+				Array that will contain the descriptors for each end of the
+				pipe.
+
+Named Pipes
+	Also known as FIFO's.
+	
+	Same as unnamed pipes, except FIFO's have a name that can be used to
+	identify them via different programs.
+	
+	Keep in mind that, like unnamed pipes, FIFO's are unidirectional.
+	
+	mkfifo
+		Shell command to make a FIFO
+		
+		$ mkfifo <pipe name>
+
+
+
 2015-12-15 Tues
 2015-12-16 Wed
 2015-12-17 Thurs
