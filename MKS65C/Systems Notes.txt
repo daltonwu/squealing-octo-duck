@@ -1455,6 +1455,26 @@ Named Pipes
 
 
 2015-12-15 Tues
+SoTD: "Tropicalia"
+Aim: Pipe
+
+Named Pipes
+	
+	mkfifo — <sys/types.h> <sys/stat.h>
+		
+		C function to create a FIFO
+		
+		Returns 0 on success and -1 on failure
+		
+		Once created, the FIFO acts like a regular file, and we can use open,
+		read, write, and close on it.
+		
+		mkfifo(<name>, <permissions>)
+		
+		FIFO's will
+
+
+
 2015-12-16 Wed
 2015-12-17 Thurs
 2015-12-18 Fri
