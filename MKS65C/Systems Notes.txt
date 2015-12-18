@@ -1508,6 +1508,31 @@ Aim: You just got served!
 
 
 2015-12-18 Fri
+SoTD: The last 8 songs in Abbey Road — The Beatles
+Aim: Sometimes you have to ask your server for another fork
+
+Basic Server
+	1. Basic handshake
+	2. Server gets data from client, processes it, and sends back a response.
+	3. Once the client exits, the server creates a new WKP and removes the old
+	   client connections, and the steps restart.
+
+Forking Server
+	Main server forks off dedicated subservers for each client connection.
+	
+	Allows for multiple simultaneous clients.
+	
+	Handshake proecdure is modified on the server:
+		Steps 1–6 are the same.
+		
+		7. Server forks off a subserver.
+		8. *Subserver* connects to client pipe, sending an initial
+		   acknowledgement message.
+	
+	After the handshake:
+		Main server creates a new WKP and waits for a new client.
+
+
 
 2015-12-21 Mon
 2015-12-22 Tues
