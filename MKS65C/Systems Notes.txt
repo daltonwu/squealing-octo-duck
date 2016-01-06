@@ -1586,12 +1586,82 @@ Physical Layer
 			go into the cable and leech the data out.
 		
 		Thinnet
-	
 
 
 
 2015-01-05 Tues
+SoTD: "Virtual Insanity" — Jamiroquai
+Aim: Cisco in an hour™ II: Electric Boogaloo
+
+Physical Layer
+	Thinnet
+		A single coaxial cable runs throughout the network, t-junctions used
+		to splice connections.
+	
+	In thicknet and thinnet, all data is sent to all computers.
+	
+	Each computer added increases the power drain on the entire system,
+	degrading service.
+	
+	Token Ring
+		Each computer is connected in a ring to each other.
+		
+		Only one computer has command of the network resources at a time. This
+		is called "having the token".
+		
+		The net work sends a "token" throughout the ring, which contains the
+		identity of the computer with the token. All other computers must wait
+		to use the network.
+		
+		No possibility of collisions.
+	
+	Ethernet
+		Multiple computers connect to a single hub or switch.
+		
+		Hub
+			Broadcasts the data to all the computers
+		Switch
+			Sends data to a specific computer (needs to look at data link
+			layer).
+		
+		The more computers you add to an Ethernet network, the greater the
+		chance of collisions.
+
+
+
 2015-01-06 Wed
+SoTD: "Break on Through" — The Doors
+Aim: Cisco in an hour™ III: in 3-D!
+
+Data Link Layer (2)
+	
+	Point-to-point transmission between devices on the same (local) network.
+	
+	Each device is given a unique 6-byte MAC (Media Access Control) address,
+	set on each network card when they are made.
+	
+	Data is packaged into frames.
+		
+		Ethernet Frame:
+			
+			prefix	dest	source	…	data		checksum
+			8B		6B		6B		6B	46–1500B	4B
+			(B = bytes)
+			
+			prefix: 10101010 x 7 + 10101011
+			
+			destination / source: MAC addresses
+			
+			…: information about frame type
+			
+			checksum: to ensure data integrity
+		
+		MTU
+			Maximu Transmission Unit
+			1500 bytes for Ethernet
+
+
+
 2015-01-07 Thurs
 2015-01-08 Fri
 
