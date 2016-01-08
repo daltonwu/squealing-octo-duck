@@ -1678,10 +1678,18 @@ Network Layer (3)
 	IP (Internet Protocol) addresses
 		IPv4: 4-byte address
 			[0–255].[0–255].[0–255].[0–255]
+		
+		Routing is made easier by having IP addresses distributed in blocks.
 
 
 
 2015-01-08 Fri
+SoTD: "Mr. Jones" — Counting Crows
+Aim: Cisco in an hour™ V for Vendetta
+
+
+
+
 
 2015-01-11 Mon
 2015-01-12 Tues
