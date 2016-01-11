@@ -1689,9 +1689,53 @@ Aim: Cisco in an hour™ V for Vendetta
 
 
 
-
-
 2015-01-11 Mon
+SoTD: "Space Oddity" — David Bowie
+Aim: Cisco in an hour™ VI: The Undiscovered Country
+
+Network Layer (3)
+	
+	Data is broken into packets
+	header info	packet length	fragment info
+	2B			2B				4B
+	time to live	protocol	header checksum
+	1B				1B			2B
+	source		destination	…	data
+	4B			4B			4B	20–65,535B
+	
+	header info: packet type (IPv4/6), header length …
+	
+	fragment info:	Full payloads may be broken up. This has the total number
+					of fragments as well as which fragment the current packet
+					contains.
+	time to live:	Maximum number of hops before the packet dies.
+	
+	protocol: TCP/UCP/…
+	…: optional information depending on type of packet
+	
+	IP MTU is 65,535B
+	
+	IPv6
+		Now 20 years old!
+		
+		Designed to overcome the limitations of IPv4.
+		
+		Addresses
+			Address space goes from 2^32 to 2^128.
+			
+			Addresses are written as 8 groups of 4 hexadecimal digits.
+			
+			87ab:301c:b251:…
+			
+			All existing IPv4 addresses can be written like this:
+			
+			0000:0000:0000:ffff:129.89.150.100
+		
+		MTU
+			4.3 billion (2^32)
+			Also referred to as jumbograms.
+
+
 2015-01-12 Tues
 2015-01-13 Wed
 2015-01-14 Thurs
