@@ -1,0 +1,37 @@
+2016-02-03 Wed
+Aim: Canvassing the area.
+
+HTML5!
+	Redesign of HTML with a focus on making the more "modern" features of web
+	browsers easy to work with.
+	
+	Designed around Javascript and a standardized DOM
+		Document Object Model
+			Model that organizes the components of a web page as a tree
+			
+			Provides an API to access the elements of a webpage via programming
+			languages like Javascript
+		
+		Includes built-in support for audio and video playback.
+		
+		Includes an element that can be directly drawn on
+
+Canvas
+	HTML5 element that provides a drawing area.
+	
+	Javascript functions can draw onto a canvas element.
+	
+		You must declare what context you are drawing in. For example: 2D drawing,
+		3D drawing, raw bitmap rendering …
+	
+	Basic canvas operation:
+	
+		HTML
+			<canvas height="500" width="500" id="slate"></canvas>
+		
+		Javascript
+			var c = document.getElementById("slate");
+			var ctx = c.getContext("2d");
+			
+			ctx.fillStyle = "#f00";
+			ctx.fillRect(50, 50, 100, 200);

@@ -1,0 +1,14 @@
+netpbm
+  * Raster
+  * Lossless
+  * Uncompressed
+
+Format:
+
+# header
+P3
+XRES YRES
+MAX_COLOR_VALUE
+R G B R G B R G B
+
+All whitespace is equivalent
