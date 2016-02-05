@@ -12,3 +12,6 @@ MAX_COLOR_VALUE
 R G B R G B R G B
 
 All whitespace is equivalent
+
+2016-02-05 Fri
+Bresenham's Line Algorithm
