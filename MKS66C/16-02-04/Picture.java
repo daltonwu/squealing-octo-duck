@@ -18,9 +18,7 @@ public class Picture {
 		int foo = 0;
 		for(int i = 0; i < 1920; i++) {
 			for(int j = 0; j < 1080; j++) {
-				//if(j%2 == 0) {
-					foo = rand.nextInt(3);
-				//}
+				foo = rand.nextInt(3);
 				switch(foo) {
 					case 0:
 						w.print("255 0 0 ");
