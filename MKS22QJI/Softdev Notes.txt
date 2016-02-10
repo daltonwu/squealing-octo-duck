@@ -1,4 +1,4 @@
-2016-02-03 Wed
+16-02-03 We
 Aim: Canvassing the area.
 
 HTML5!
@@ -35,4 +35,119 @@ Canvas
 			
 			ctx.fillStyle = "#f00";
 			ctx.fillRect(50, 50, 100, 200);
-			
+
+
+
+16-02-09 Tu
+Aim: Your path to success starts here!
+
+Javascript path functions
+	
+	Paths are used to draw arbitrary shapes
+	
+	A context can keep track of one	path at a time
+	
+	The path is not drawn until stroke() is called
+	
+	A path is considered done when beginPath() is called again
+	
+	beginPath()
+		Starts or resets the current path
+	
+	moveTo(x, y)
+		Moves the path to position (x, y), does not result in a line or a
+		filled in section
+	
+	lineTo(x, y)
+		Moves the path to position (x, y), will result in a line or a filled in
+		section
+	
+	closePath()
+		Results in a line from the current position to the starting position
+		
+		The path can be continued after
+	
+	stroke()
+		Renders all the lines in the path. Does not end the path
+	
+	fill()
+		Fills the interior of the path. Will not work if the path has fewer
+		than three points. 
+
+
+
+16-02-10 We
+16-02-11 Th
+16-02-12 Fr
+
+16-02-22 Mo
+16-02-23 Tu
+16-02-24 We
+16-02-25 Th
+16-02-26 Fr
+
+16-02-29 Mo
+16-03-01 Tu
+16-03-02 We
+16-03-03 Th
+16-03-04 Fr
+
+16-03-07 Mo
+16-03-08 Tu
+16-03-09 We
+16-03-10 Th
+16-03-11 Fr
+
+16-03-14 Mo
+16-03-15 Tu
+16-03-16 We
+16-03-17 Th
+16-03-18 Fr
+
+16-03-21 Mo
+16-03-22 Tu
+16-03-23 We
+16-03-24 Th
+16-03-25 Fr
+
+16-03-28 Mo
+16-03-29 Tu
+16-03-30 We
+16-03-31 Th
+
+16-04-01 Fr
+
+16-04-02 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

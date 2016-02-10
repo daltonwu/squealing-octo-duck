@@ -15,3 +15,51 @@ All whitespace is equivalent
 
 2016-02-05 Fri
 Bresenham's Line Algorithm
+
+Draw line from (x0, y0) -> (x1, y1)
+
+			Octant I:
+
+// original:
+x = x0, y = y0
+while(x <= x1)
+	plot(x, y)
+	d = f(x+1, y+1/2)
+	if(d > 0)
+		y += 1
+	x += 1
+
+// optimized a bit:
+x = x0, y = y0
+d = A + B/2
+while(x <= x1)
+	plot(x, y)
+	if(d > 0)
+		y += 1
+		d += B
+	x += 1
+	d += A
+
+// optimized some more:
+x = x0, y = y0
+d = 2A + B
+while(x <= x1)
+	plot(x, y)
+	if(d > 0)
+		y += 1
+		d += 2B
+	x += 1
+	d += 2A
+
+			Octant II:
+
+x = x0, y = y0
+A = y1 - y0, B = -(x1 - x0)
+d = A + 2B
+while(y <= y1)
+	plot(x, y)
+	if(d < 0)
+		x += 1
+		d += 2A
+	y += 1
+	A += 2B

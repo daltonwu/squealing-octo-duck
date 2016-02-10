@@ -13,11 +13,11 @@ public class Picture {
 		}
 		
 		w.println("P3");
-		w.println("1920 1080 255");
+		w.println("1 1 255");
 		
 		int foo = 0;
-		for(int i = 0; i < 1920; i++) {
-			for(int j = 0; j < 1080; j++) {
+		for(int i = 0; i < 1; i++) {
+			for(int j = 0; j < 1; j++) {
 				foo = rand.nextInt(3);
 				switch(foo) {
 					case 0:
