@@ -13,7 +13,7 @@ R G B R G B R G B
 
 All whitespace is equivalent
 
-2016-02-05 Fri
+2016-02-05 Fr
 Bresenham's Line Algorithm
 
 Draw line from (x0, y0) -> (x1, y1)
@@ -64,7 +64,27 @@ while(y <= y1)
 	y += 1
 	A += 2B
 
+
+
 16-02-22 Mo
 Using Matrices
 Point Matrix
 
+
+
+16-02-23 Tu
+Matrix Math Review
+	Scalar multiplication
+		
+	Matrix multiplication
+		|a b c|   |1 4|   |(a + 2b + 3c) (4a + 5b + 6c)|
+		|d e f| x |2 5| = |(d + 2e + 3f) (4d + 5e + 6f)|
+		|g h i|   |3 6|   |(g + 2h + 3i) (4g + 5h + 6i)|
+
+	Multiplicative Identity	Matrix
+		* Square matrix
+		* Diagonal values are 1; rest are 0
+
+
+
+16-02-24 We
