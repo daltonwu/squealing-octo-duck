@@ -76,12 +76,28 @@ Javascript path functions
 
 
 
-16-02-10 We
-16-02-11 Th
-16-02-12 Fr
-
-16-02-22 Mo
 16-02-23 Tu
+Aim: Let's animate!
+
+What we won't be using
+	setInterval
+
+What we will be using
+	requestAnimationFrame
+
+Why?
+	requestAnimationFrame tells the browser to run a specified function before
+	drawing the next frame.
+	
+	The browser will attempt to run ≈60 frames per second or the display
+	refresh rate (per W3C recommendation).
+	
+	It lets the browser handle when the code should be executed (as opposed to
+	setInterval which is based on specific times). It also lets the browser
+	pause animation when a page is not in the foreground.
+
+
+
 16-02-24 We
 16-02-25 Th
 16-02-26 Fr
