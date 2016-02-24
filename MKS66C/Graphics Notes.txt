@@ -88,3 +88,29 @@ Matrix Math Review
 
 
 16-02-24 We
+Transformation Matrices
+
+Scaling
+	(x, y, z) ---------> (ax, by, cz)
+	          S(a, b, c)
+	
+	|a 0 0 0|   |x|   |ax|
+	|0 b 0 0|   |y|   |by|
+	|0 0 c 0| x |z| = |cz|
+	|0 0 0 1|   |1|   |1 |
+
+Translating
+	(x, y, z) ---------> (x+a, y+b, c+z)
+	          T(a, b, c)
+	
+	|1 0 0 a|   |x|   |x+a|
+	|0 1 0 b|   |y|   |y+b|
+	|0 0 1 c| x |z| = |z+c|
+	|0 0 0 1|   |1|   |1  |
+
+Rotating
+	(x, y, z) --------> (x
+	          R axis, θ
+	
+	x_r = rcos(ϕ + θ) = xcosθ - ysinθ
+	y_r = rsin(ϕ + θ) = ycosθ + xsinθ
