@@ -78,7 +78,7 @@ Matrix Math Review
 		
 	Matrix multiplication
 		|a b c|   |1 4|   |(a + 2b + 3c) (4a + 5b + 6c)|
-		|d e f| x |2 5| = |(d + 2e + 3f) (4d + 5e + 6f)|
+		|d e f| × |2 5| = |(d + 2e + 3f) (4d + 5e + 6f)|
 		|g h i|   |3 6|   |(g + 2h + 3i) (4g + 5h + 6i)|
 
 	Multiplicative Identity	Matrix
@@ -91,26 +91,67 @@ Matrix Math Review
 Transformation Matrices
 
 Scaling
-	(x, y, z) ---------> (ax, by, cz)
-	          S(a, b, c)
+	(x, y, z) -----------> (ax, by, cz)
+	           S(a, b, c)
 	
 	|a 0 0 0|   |x|   |ax|
 	|0 b 0 0|   |y|   |by|
-	|0 0 c 0| x |z| = |cz|
+	|0 0 c 0| × |z| = |cz|
 	|0 0 0 1|   |1|   |1 |
 
 Translating
-	(x, y, z) ---------> (x+a, y+b, c+z)
-	          T(a, b, c)
+	(x, y, z) -----------> (x+a, y+b, c+z)
+	           T(a, b, c)
 	
 	|1 0 0 a|   |x|   |x+a|
 	|0 1 0 b|   |y|   |y+b|
-	|0 0 1 c| x |z| = |z+c|
+	|0 0 1 c| × |z| = |z+c|
 	|0 0 0 1|   |1|   |1  |
 
 Rotating
-	(x, y, z) --------> (x
-	          R axis, θ
+	(x, y, z) -------> (xcosθ-ysinθ, xsinθ+ycosθ, z)
+	           R_z, θ
 	
 	x_r = rcos(ϕ + θ) = xcosθ - ysinθ
 	y_r = rsin(ϕ + θ) = ycosθ + xsinθ
+	
+	|cosθ -sinθ 0 0|
+	|sinθ  cosθ 0 0|
+	|0     0    1 0|
+	|0     0    0 1|
+	
+	(x, y, z) -------> (x, ycosθ-zsinθ, ysinθ+zcosθ)
+	           R_x, θ
+	
+	|1  0     0    0|
+	|0  cosθ -sinθ 0|
+	|0  sinθ  cosθ 0|
+	|0  0     0    1|
+	
+	(x, y, z) -------> (xcosθ-zsinθ, y, xsinθ+zcosθ)
+	           R_y, θ
+	
+	|cosθ 0 -sinθ 0|
+	|0    1  0    0|
+	|sinθ 0  cosθ 0|
+	|0    0  0    1|
+
+
+
+16-02-25 Th
+Applying Transformations
+
+E_0    edge matrix    (4 × n)
+T      translate      (4 × 4)
+S      scale          (4 × 4)
+R      rotate         (4 × 4)
+
+T × E_0 = E_1
+S × E_1 = E_2
+R × E_2 = E_3
+
+E_3 = (R × S × T) × E_1
+
+
+
+16-02-26 Fr
