@@ -133,7 +133,51 @@ SVG (Scalable Vector Graphics)
 
 16-02-26 Fr
 
+
+
 16-02-29 Mo
+Aim: Tipping the scales of vectors
+
+Creating SVG elements in Javascript
+	
+	document.createElementNS(<NAMESPACE IDENTIFIER>, <ELEMENT>);
+		
+		Creates an element from a specified XML namespace
+		
+		SVG example:
+			var c1 = document.createElementNS("http://www.w3.org/2000/svg",
+			                                  "circle");
+			
+			Once created, you can modify it with setAttribute calls
+				
+				c1.setAttribute("cx", "200");
+			
+			To add the element to your SVG container, use the appendChild
+			function
+				
+				var pic = = document.getElementById("svgid");
+				pic.appendChild(c1);
+			
+			To remove SVG elements, you can either:
+				
+				pic.removeChild(c1);
+				
+				c1.remove();
+
+Animations with SVG and Javascript
+	
+	The canvas animate methods do not work on SVG
+	
+	Here, we will have to use setInterval
+		
+		setInterval(<FUNCTION>, <TIME>)
+	
+	To stop an animation, use clearInterval
+		
+		clearInterval(<ID>)
+
+
+
 16-03-01 Tu
 16-03-02 We
 16-03-03 Th
