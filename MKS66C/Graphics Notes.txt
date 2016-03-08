@@ -154,4 +154,24 @@ E_3 = (R × S × T) × E_1
 
 
 
-16-02-26 Fr
+16-03-07 Mo
+Parametric Equations
+
+x = f(t)
+y = g(t)
+t: 0 -> 1
+
+drawing sin curve—number of lines matters (like poly count)
+piecewise functions
+
+Hermite curve inputs:
+	* Endpoints P0, P1
+	* Rates of change at each endpoint, R0, R1
+
+f(t) = at^3 + bt^2 + ct + d
+f'(t) = 3at^2 + 2bt + c
+
+||   |a|   |d            |   |P0|
+||   |b|   |a + b + c + d|   |P1|
+||   |c| = |c            | = |R0|
+||   |d|   |3a + 2b + c  |   |R1|
