@@ -171,7 +171,32 @@ Hermite curve inputs:
 f(t) = at^3 + bt^2 + ct + d
 f'(t) = 3at^2 + 2bt + c
 
-||   |a|   |d            |   |P0|
-||   |b|   |a + b + c + d|   |P1|
-||   |c| = |c            | = |R0|
-||   |d|   |3a + 2b + c  |   |R1|
+t: 0 -> 1
+
+|0 0 0 1|   |a|   |d            |   |P0|
+|1 1 1 1|   |b|   |a + b + c + d|   |P1|
+|0 0 1 0| × |c| = |c            | = |R0|
+|3 2 1 0|   |d|   |3a + 2b + c  |   |R1|
+    H        G           C
+
+| 2 -2  1  1|
+|-3  3 -2 -1|
+| 0  0  1  0|
+| 1  0  0  0|
+  H inverse
+
+
+
+16-03-09
+Bezier Curve
+
+Inputs:
+P0, P3 (endpoints)
+P1, P2 (influence points)
+
+Linear Bezier curve
+P0, P1
+
+Quadratic
+P0, P2
+P1 influence point
