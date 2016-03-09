@@ -197,6 +197,10 @@ P1, P2 (influence points)
 Linear Bezier curve
 P0, P1
 
+P(t) = (1-t)P0 + tP1
+
 Quadratic
 P0, P2
 P1 influence point
+
+P(t) = (1-t)
