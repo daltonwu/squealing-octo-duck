@@ -190,17 +190,26 @@ t: 0 -> 1
 16-03-09
 Bezier Curve
 
-Inputs:
-P0, P3 (endpoints)
-P1, P2 (influence points)
+Inputs
+	P0, P3 (endpoints)
+	P1, P2 (influence points)
 
 Linear Bezier curve
-P0, P1
-
-P(t) = (1-t)P0 + tP1
+	P0, P1 (endpoints)
+	
+	P(t) = (1-t)P0 + tP1
 
 Quadratic
-P0, P2
-P1 influence point
+	P0, P2 (endpoints)
+	P1 (influence point)
+	
+	R(t) = (1-t)R0 + tR1
+	
+	R0(t) = (1-t)P0 + tP1
+	R1(t) = (1-t)P0 + tP2
+	
+	R(t) = (1-t)**2 * P0 + 2t*(1-t) * P1 + t**2 * P2
 
-P(t) = (1-t)
+Cubic
+	Q(t) = (1-t)R0 + t(R1)
+	     = (1-t)**3 * P0 + 3*t*(1-t)**2 * P1 + 3*t**2*(1-t) * P2 + t**3 * P3
