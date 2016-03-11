@@ -77,9 +77,9 @@ Matrix Math Review
 	Scalar multiplication
 		
 	Matrix multiplication
-		|a b c|   |1 4|   |(a + 2b + 3c) (4a + 5b + 6c)|
-		|d e f| × |2 5| = |(d + 2e + 3f) (4d + 5e + 6f)|
-		|g h i|   |3 6|   |(g + 2h + 3i) (4g + 5h + 6i)|
+		|a b c| |1 4|   |(a + 2b + 3c) (4a + 5b + 6c)|
+		|d e f| |2 5| = |(d + 2e + 3f) (4d + 5e + 6f)|
+		|g h i| |3 6|   |(g + 2h + 3i) (4g + 5h + 6i)|
 
 	Multiplicative Identity	Matrix
 		* Square matrix
@@ -94,19 +94,19 @@ Scaling
 	(x, y, z) -----------> (ax, by, cz)
 	           S(a, b, c)
 	
-	|a 0 0 0|   |x|   |ax|
-	|0 b 0 0|   |y|   |by|
-	|0 0 c 0| × |z| = |cz|
-	|0 0 0 1|   |1|   |1 |
+	|a 0 0 0| |x|   |ax|
+	|0 b 0 0| |y|   |by|
+	|0 0 c 0| |z| = |cz|
+	|0 0 0 1| |1|   |1 |
 
 Translating
 	(x, y, z) -----------> (x+a, y+b, c+z)
 	           T(a, b, c)
 	
-	|1 0 0 a|   |x|   |x+a|
-	|0 1 0 b|   |y|   |y+b|
-	|0 0 1 c| × |z| = |z+c|
-	|0 0 0 1|   |1|   |1  |
+	|1 0 0 a| |x|   |x+a|
+	|0 1 0 b| |y|   |y+b|
+	|0 0 1 c| |z| = |z+c|
+	|0 0 0 1| |1|   |1  |
 
 Rotating
 	(x, y, z) -------> (xcosθ-ysinθ, xsinθ+ycosθ, z)
@@ -173,10 +173,10 @@ f'(t) = 3at^2 + 2bt + c
 
 t: 0 -> 1
 
-|0 0 0 1|   |a|   |d            |   |P0|
-|1 1 1 1|   |b|   |a + b + c + d|   |P1|
-|0 0 1 0| × |c| = |c            | = |R0|
-|3 2 1 0|   |d|   |3a + 2b + c  |   |R1|
+|0 0 0 1| |a|   |d            |   |P0|
+|1 1 1 1| |b|   |a + b + c + d|   |P1|
+|0 0 1 0| |c| = |c            | = |R0|
+|3 2 1 0| |d|   |3a + 2b + c  |   |R1|
     H        G           C
 
 | 2 -2  1  1|
@@ -211,5 +211,19 @@ Quadratic
 	R(t) = (1-t)**2 * P0 + 2t*(1-t) * P1 + t**2 * P2
 
 Cubic
-	Q(t) = (1-t)R0 + t(R1)
+	P0, P1, P2, P3 -> at^3 + bt^2 + ct + d
+	
+	R(t) = (1-t) * Q0 + t * Q1
 	     = (1-t)**3 * P0 + 3*t*(1-t)**2 * P1 + 3*t**2*(1-t) * P2 + t**3 * P3
+	     = (-P0 + 3P1 - 3P2 + P3)t^3 + (3P0 - 6P1 + 3P2)t^2 + (-3P0 + 3P1)t + P0
+	
+	|-1  3 -3 1| |P0|   |a|   | -P0 + 3P1 - 3P2 + P3|
+	| 3 -6  3 0| |P1|   |b|   | 3P0 - 6P1 + 3P2     |
+	|-3  3  0 0| |P2| = |c| = |-3P0 + 3P1           |
+	| 1  0  0 0| |P3|   |d|   |  P0                 |
+	
+	at^3 + bt^2 + ct + d
+	2 exponentiation, 3 multiplication, 3 addition
+	
+	t(t(at + b) + c) + d
+	3 multiplication, 3 addition
