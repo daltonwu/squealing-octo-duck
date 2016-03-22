@@ -258,5 +258,25 @@ Inputs: width, height, depth
         upper-left-front
 
 Sphere:
-|1 0 0 0|
-|0 cos phi
+
+θ: angle of circle creation
+ϕ: angle of circle rotation
+
+if θ: 0 -> 2pi
+    ϕ: 0 -> pi
+
+if θ: 0 -> pi
+    ϕ: 0 -> 2pi
+
+
+|1 0     0     0||rcosθ|   |rcosθ    |
+|0 cosϕ -sinϕ  0||rsinθ|   |rsinθcosϕ|
+|0 sinϕ  cosϕ  0||0    | = |rsinθsinϕ|
+|0 0     0     1||1    |   |1        |
+
+for p: 0 -> 1
+    for t: 0 -> 1
+        x = rcos(pi*t)
+        y = rsin(pi*t)cos(2pi*p)
+        z = rsin(pi*t)sin(2pi*p)
+
