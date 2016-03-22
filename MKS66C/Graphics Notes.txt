@@ -257,7 +257,7 @@ Inputs: width, height, depth
         (x, y, z)
         upper-left-front
 
-Sphere:
+Sphere
 
 θ: angle of circle creation
 ϕ: angle of circle rotation
@@ -280,3 +280,9 @@ for p: 0 -> 1
         y = rsin(pi*t)cos(2pi*p)
         z = rsin(pi*t)sin(2pi*p)
 
+Torus
+
+|1 0     0    0||rcosθ    |   |rcosθ          |
+|0 cosϕ -sinϕ 0||rsinθ + R|   |cosϕ(rsinθ + R)|
+|0 sinϕ  cosϕ 0||0        | = |sinϕ(rsinθ + R)|
+|0 0     0    1||1        |   |1              |
