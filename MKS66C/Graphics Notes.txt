@@ -332,6 +332,27 @@ Algorithm
     * A = <x1 - x0, y1 - y0, z1 - z0>
     * B = <x2 - x0, y2 - y0, z2 - z0>
     * A × B = <AyBz - AzBy, AzBx - AxBz, AxBy - AyBx>
-2. Find angle between N and V
-3. If the angle is between 90° and 270°, draw the surface
+2. Find the angle between N and V
+    * V = <0, 0, -1>
+3. If the angle is between 90° and 270° (negative cosine), draw the surface
 
+
+
+16-04-12
+Relative Coordinate System
+--------------------------
+* Currently, all objects are drawn with respect to the same origin / coordinate
+  system (global coordinate system)
+* In a relative coordinate system, each object can have its own origin /
+  coordinate system
+* Use a stack to store the coordinate systems
+
+Drawing Framework
+-----------------
+A. Transformations are applied to the current top of the stack
+B. The stack is pushed and popped as needed
+C. Drawing Pipeline:
+    1. Generate the points/polygons and add them to a matrix
+    2. Multiply the points by the current stack top
+    3. Draw the points to the screen
+    4. Clear the point matrix
