@@ -1,5 +1,3 @@
-#cancer
-
 import time
 
 val = [1, 1]
@@ -13,7 +11,9 @@ def timer(f):
         return foo
     return inner
 
+
 def remember(f):
+    ''' memo-ization '''
     values = {}
     def inner(arg):
         if arg not in values:
