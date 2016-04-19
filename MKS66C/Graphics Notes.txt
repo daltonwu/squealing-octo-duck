@@ -401,3 +401,46 @@ C. Drawing Pipeline:
 |                    |     I     |         |
 --------------------------------------------
 
+
+
+16-04-19
+
+Compilers
+---------
+
+Source code -> compiler -> machine code
+
+1. Lexer
+    * Performs lexical analysis
+    * Knows the valid symbols of the language
+    * Generates a list of the tokens in the source code
+    * Example:
+        * Source code:
+            int main() {
+                long x = 5 + 6;
+                printf("hi");
+                return 0;
+            }
+        * Output:
+            int
+            IDENT main
+            (
+            )
+            {
+            long
+            IDENT x
+            =
+            5
+            +
+            6
+        etc.
+2. Parser
+    * Performs syntax analysis
+    * Knows the grammar of the language
+    * Generates a syntax tree
+3. Semantic analyzer
+4. Optimizer (optional)
+5. Code generator
+
+(does not include preprocessor steps)
+
