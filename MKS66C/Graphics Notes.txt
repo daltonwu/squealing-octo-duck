@@ -419,7 +419,7 @@ Source code -> compiler -> machine code
             int main() {
                 long x = 5 + 6;
                 printf("hi");
-                return 0;
+                return x;
             }
         * Output:
             int
@@ -439,8 +439,15 @@ Source code -> compiler -> machine code
     * Knows the grammar of the language
     * Generates a syntax tree
 3. Semantic analyzer
+    * Knows how to map tokens to operations or variables
+    * Knows how to properly navigate the syntax tree
+    * Generates:
+        1. Symbol table
+        2. List of operations in the order to be performed
 4. Optimizer (optional)
 5. Code generator
+    * Knows what the operations mean in assembly/machine code
+    * Generates the machine code program file
 
 (does not include preprocessor steps)
 
