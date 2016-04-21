@@ -35,3 +35,25 @@ var makeIncrementer = function() {
         return ++foo;
     }
 };
+
+var makeCounter = function() {
+    var c = 0;
+    
+    var get = function() {
+        return c;
+    };
+    
+    var inc = function() {
+        return ++c;
+    };
+    
+    var dec = function() {
+        return --c;
+    };
+    
+    return {
+        get: get,
+        inc: inc,
+        dec: dec
+    };
+};
