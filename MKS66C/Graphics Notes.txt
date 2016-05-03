@@ -456,3 +456,26 @@ lex (flex)
 yacc (bison)
 
 BUFFALO
+
+
+
+2016-05-03
+Animation
+
+move 400 0 0 factor
+
+vary factor 0 4                 0 1
+            start & end frames  start & end values
+
+New MDL Commands
+----------------
+frames <N>
+    * Sets total # of frames
+    * Should only be done once
+
+basename <S>
+    * Sets the fixed part of the filename of each frame
+
+vary <KNOB> <F0> <F1> <V0> <V1>
+    * Describes how the knob changes over time
+    * Linear scaling of values
