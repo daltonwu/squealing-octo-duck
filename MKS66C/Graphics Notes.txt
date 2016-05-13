@@ -479,3 +479,22 @@ basename <S>
 vary <KNOB> <F0> <F1> <V0> <V1>
     * Describes how the knob changes over time
     * Linear scaling of values
+
+
+
+2016-05-12
+get notes!
+Scanline Conversion
+* Filling in a polygon with horizontal/vertical line segments
+* Need to identify the top, bottom, and middle for each polygon
+* (x0, y0) will always be on line BT
+* (x1, y1) will always be on line BM or MT
+* The first line segment is BB (xB, yB)
+* The second line segment is 
+
+
+
+2016-05-13
+
+
+
