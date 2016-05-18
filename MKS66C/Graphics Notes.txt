@@ -494,7 +494,19 @@ Scanline Conversion
 
 
 
-2016-05-13
+2016-05-18
 
+Z-Buffering
+-----------
+* Keep track of the z-coordinates for each pixel in a z-buffer
+* Before plotting a pixel, check its z-value against the z-buffer
+* Initialize z-buffer with the smallest possible value
+* Calculate z-values for each pixel
 
+plot(x, y, screen, color) -> plot(x, y, z, screen, zb, color)
 
+draw_line()
+draw_polygons
+scanline
+
+delta z / length of line
