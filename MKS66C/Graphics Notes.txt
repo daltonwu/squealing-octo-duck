@@ -510,3 +510,39 @@ draw_polygons
 scanline
 
 delta z / length of line
+
+
+
+2016-05-23
+
+Modelling Real Lighting
+----------------------
+
+Colors are calculated by looking at:
+    1. The reflective properties of each object.
+    2. The properties of the light hitting the object.
+
+2 kinds of light sources:
+	* Ambient light
+		* Background lighting
+		* Hits all objects equally
+	* Point light
+		* Comes from a specific point
+		* Reflection is based on an object's location relative to the source
+
+Lighting Equation
+-----------------
+    * We want to generate a color value for each polygon (or pixel).
+    * For a grayscale image, we only need to calculate the color once per
+      polygon.
+    * For a color image, we must calculate separate color values for red,
+      green, and blue for each polygon.
+    * I (illumination)
+    * I = I_ambient + I_diffuse + I_specular (different kinds of light sources
+      and reflection)
+    * I_ambient:
+    	* Combination of the color of ambient light and the amount and colors
+    	  reflected by the object
+    * I_diffuse (diffuse reflection):
+        * Point lights are reflected back equally in all directions
+        * Based 
