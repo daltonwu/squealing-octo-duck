@@ -540,26 +540,55 @@ Lighting Equation
 * I (illumination):
 	* I = I_ambient + I_diffuse + I_specular (different kinds of light sources
 	  and reflection)
-	* I_ambient:
+	* I_ambient = C_a * K_a
+    	* C_a = ambient light color value
+		* K_a = constant of ambient light reflection
 		* Combination of the color of ambient light and the amount and colors
 		  reflected by the object
 		* Comes from all directions
 		* Hits all surfaces equally
-	* I_diffuse (diffuse reflection):
+	* I_diffuse (diffuse reflection) = C_p * K_d * cos(θ)
+		* C_p = color of point source
+		* K_d = constant of diffuse reflection
+		* cos(θ) = L ∙ N (both unit vectors)
 		* From a point light source
 		* Reflected in all directions equally
-	* I_specular:
+	* I_specular = C_p * K_s * cos(α)
+		* C_p = color of point source
+		* K_s = constant of specular reflection
+		* cos(α) ** n = (R ∙ V) ** n = ([2 * N * (L ∙ N) - L] ∙ V) ** n (all
+		  unit vectors)
 		* From a point light source
 		* Reflected back in a specific direction
+		* Note:
+			* L = incident light vector
+			* V = view vector
+			* R = reflected light vector
+			* P = N * cos(θ) = projection of L onto N (all are unit vectors)
+			* S = P - L = projection of P onto L (all are unit vectors)
 
 Reflective Properties
 ---------------------
-* Represented as the % of light of each color reflected back.
-* 0 <= 
+* Represented as the floating point % of light of each color reflected back.
+* Generally (practically), between 0% and 100%
 
 Quality of Light
 ----------------
 * Ambient:
-	* Represented as a color value (0–255)
+	* Represented as a color value in [0, 255]
 * Point light:
 	* Represented as a color value (0–255) and point (x, y, z)
+
+Shading Model
+-------------
+* How do we calculate I?
+	1. For a flat surface:
+		* Calculate I once per polygon.
+	2. Using Gouraud shading:
+		* For each polygon, calculate the vertex normals (combination of surface
+		  normals of all polygons that share a vertex).
+        * Interpolate I during scanline conversion and during drawline.
+    3. Using Phong Shading:
+        * Calculate vertex normals.
+        * Interpolate the normal in scanline conversion and drawline.
+        * Recalculate I for each pixel.
