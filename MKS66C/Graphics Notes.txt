@@ -592,3 +592,4 @@ Shading Model
         * Calculate vertex normals.
         * Interpolate the normal in scanline conversion and drawline.
         * Recalculate I for each pixel.
+
